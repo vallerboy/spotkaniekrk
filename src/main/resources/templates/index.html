@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div style="text-align: center;">
+       <h1 th:text="${weather.getTempModel().getTemp()}"></h1>
+       <h1 th:text="${weather.getCloudModel().getCloudy()}"></h1>
+         <br />
+            <form action="/" method="post">
+                <input type="text" name="city" placeholder="Podaj miasto">
+                <input type="submit" value="Wyślij">
+            </form>
+  </div>
+</body>
+</html>
