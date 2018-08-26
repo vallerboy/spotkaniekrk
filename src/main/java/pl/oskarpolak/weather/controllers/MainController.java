@@ -22,22 +22,12 @@ public class MainController {
                         Model model){
 
 
-        WeatherModel weatherModel = getRestTemplate().getForObject("http://api.openweathermap.org/data/2.5/weather?q="+city+",pl&appid=ef2028e98b54649bf1f4c4582631f350",
-                            WeatherModel.class);
+        WeatherModel weatherModel = getRestTemplate().getForObject("http://api.openweathermap.org/data/2.5/weather?q="+city+",pl&appid=ef2028e98b54649bf1f4c4582631f350", WeatherModel.class);
         model.addAttribute("weather", weatherModel);
-
-        something("siema", "joł");
-        something("siema", "co tam", "a nic", "ok");
-        something("siema", "co tam", "a nic", "ok", "ehe", "pyk");
         return "index";
     }
 
 
-    public void something(String ... names){
-        for (String name : names) {
-            System.out.println(name);
-        }
-    }
 
     @Bean
     public RestTemplate getRestTemplate(){
