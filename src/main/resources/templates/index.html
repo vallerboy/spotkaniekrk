@@ -6,7 +6,7 @@
 </head>
 <body>
   <div style="text-align: center;">
-       <h1 th:text="${weather.getTempModel().getTemp() - 273}"></h1>
+       <h1 th:text="${weather.getTempModel().getTemp()}"></h1>
        <h1 th:text="${weather.getCloudModel().getCloudy()}"></h1>
          <br />
             <form action="/" method="post">
