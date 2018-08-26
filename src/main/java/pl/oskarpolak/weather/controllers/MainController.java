@@ -26,8 +26,17 @@ public class MainController {
                             WeatherModel.class);
         model.addAttribute("weather", weatherModel);
 
-
+        something("siema", "joł");
+        something("siema", "co tam", "a nic", "ok");
+        something("siema", "co tam", "a nic", "ok", "ehe", "pyk");
         return "index";
+    }
+
+
+    public void something(String ... names){
+        for (String name : names) {
+            System.out.println(name);
+        }
     }
 
     @Bean
